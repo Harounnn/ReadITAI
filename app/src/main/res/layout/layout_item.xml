@@ -8,7 +8,8 @@
         android:layout_width="match_parent"
         android:layout_height="240dp"
         android:layout_marginBottom="10dp"
-        app:cardBackgroundColor="#720455">
+        app:cardBackgroundColor="#720455"
+        android:id="@+id/cardView">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -23,7 +24,8 @@
                 android:text="Main Heading is here !!!"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:padding="5dp">
+                android:padding="5dp"
+                android:id="@+id/heading">
             </TextView>
 
             <LinearLayout
@@ -40,13 +42,15 @@
                     android:textSize="15sp"
                     android:padding="10dp"
                     android:ellipsize="end"
-                    android:maxLines="5">
+                    android:maxLines="5"
+                    android:id="@+id/description">
                 </TextView>
 
                 <ImageView
                     android:layout_width="210dp"
                     android:layout_height="match_parent"
-                    android:src="@drawable/ic_launcher_background">
+                    android:src="@drawable/ic_launcher_background"
+                    android:id="@+id/image">
                 </ImageView>
 
             </LinearLayout>
