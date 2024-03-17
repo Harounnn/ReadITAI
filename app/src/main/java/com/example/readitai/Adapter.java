@@ -20,6 +20,10 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
     Context context;
     ArrayList<Model> models;
+
+    public Adapter(Context context, ArrayList<Model> models) {
+    }
+
     @NonNull
     @Override
     public Adapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {

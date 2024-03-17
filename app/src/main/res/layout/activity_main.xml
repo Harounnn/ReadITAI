@@ -31,15 +31,5 @@
         </RelativeLayout>
     </androidx.appcompat.widget.Toolbar>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/recyclerview"
-        android:layout_margin="2dp"
-        android:fitsSystemWindows="true"
-        android:padding="2dp"
-        android:layout_below="@id/toolbar">
-
-    </androidx.recyclerview.widget.RecyclerView>
 
 </RelativeLayout>
