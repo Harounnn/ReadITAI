@@ -22,6 +22,8 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     ArrayList<Model> models;
 
     public Adapter(Context context, ArrayList<Model> models) {
+        this.models = models;
+        this.context = context;
     }
 
     @NonNull
@@ -37,14 +39,14 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, sumNews.class);
-                intent.putExtra("content", models.get(position).getContent());
+                intent.putExtra("content", models.get(holder.getAdapterPosition()).getContent());
                 context.startActivity(intent);
             }
         });
 
-        holder.heading.setText(models.get(position).getTitle());
-        holder.description.setText(models.get(position).getContent());
-        Glide.with(context).load(models.get(position).getUrlToImage()).into(holder.image);
+        holder.heading.setText(models.get(holder.getAdapterPosition()).getTitle());
+        holder.description.setText(models.get(holder.getAdapterPosition()).getContent());
+        Glide.with(context).load(models.get(holder.getAdapterPosition()).getUrlToImage()).into(holder.image);
     }
 
     @Override

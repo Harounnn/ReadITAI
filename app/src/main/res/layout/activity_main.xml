@@ -31,6 +31,13 @@
         </RelativeLayout>
     </androidx.appcompat.widget.Toolbar>
 
+    <androidx.fragment.app.FragmentContainerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fragment_container"
+        android:layout_below="@id/toolbar">
+    </androidx.fragment.app.FragmentContainerView>
+
 
 
 </RelativeLayout>
