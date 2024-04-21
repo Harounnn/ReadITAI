@@ -31,12 +31,55 @@
         </RelativeLayout>
     </androidx.appcompat.widget.Toolbar>
 
-    <androidx.fragment.app.FragmentContainerView
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:id="@+id/include"
+        android:layout_below="@id/toolbar"
+        app:tabTextColor="#333434"
+        app:tabSelectedTextColor="#0096FF"
+        app:tabIndicatorColor="#0096FF"
+        app:tabIndicatorHeight="3.5dp"
+        android:layout_marginTop="0dp"
+        android:backgroundTint="#E2E9E9"
+        app:tabMode="fixed"
+        >
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Home"
+            android:id="@+id/home">
+
+        </com.google.android.material.tabs.TabItem>
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Favourites"
+            android:id="@+id/favourites">
+
+        </com.google.android.material.tabs.TabItem>
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Account"
+            android:id="@+id/account">
+
+        </com.google.android.material.tabs.TabItem>
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager.widget.ViewPager
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/fragment_container"
-        android:layout_below="@id/toolbar">
-    </androidx.fragment.app.FragmentContainerView>
+        android:layout_below="@id/include"
+        android:layout_marginTop="0dp"
+        android:id="@+id/container">
+
+    </androidx.viewpager.widget.ViewPager>
+
 
 
 

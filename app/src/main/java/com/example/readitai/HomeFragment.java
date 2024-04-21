@@ -17,7 +17,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class MainFragment extends Fragment {
+public class HomeFragment extends Fragment {
 
     String API_KEY="a2dc7d3521634c0cbc07c6162f4bd81a";
     ArrayList<Model> models;
@@ -29,7 +29,7 @@ public class MainFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.main_fragment, null);
-        recyclerView = v.findViewById(R.id.recyclerview);
+        recyclerView = v.findViewById(R.id.recyclerview_home);
         models = new ArrayList<>();
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         adapter = new Adapter(getContext(), models);

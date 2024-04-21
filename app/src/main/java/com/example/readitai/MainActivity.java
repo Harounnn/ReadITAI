@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Fragment fragment = new MainFragment();
+        Fragment fragment = new HomeFragment();
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.fragment_container, fragment) // Replace with your container ID
                 .commit();
