@@ -47,6 +47,8 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         holder.heading.setText(models.get(holder.getAdapterPosition()).getTitle());
         holder.description.setText(models.get(holder.getAdapterPosition()).getContent());
         Glide.with(context).load(models.get(holder.getAdapterPosition()).getUrlToImage()).into(holder.image);
+
+
     }
 
     @Override
