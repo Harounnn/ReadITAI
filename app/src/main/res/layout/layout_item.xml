@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="240dp"
         android:layout_marginBottom="10dp"
-        app:cardBackgroundColor="#720455"
+        app:cardBackgroundColor="#333434"
         android:id="@+id/cardView">
 
         <LinearLayout
@@ -20,7 +20,7 @@
                 android:layout_height="60dp"
                 android:ellipsize="end"
                 android:maxLines="2"
-                android:textColor="@color/white"
+                android:textColor="#0096FF"
                 android:text="Main Heading is here !!! hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh"
                 android:textSize="20sp"
                 android:textStyle="bold"
@@ -36,7 +36,7 @@
                 <TextView
                     android:layout_width="200dp"
                     android:layout_height="match_parent"
-                    android:textColor="@color/black"
+                    android:textColor="#E2E9E9"
                     android:text="Description is here !!! barcha klem description mtaa news hasilou blablabla hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh"
                     android:textStyle="bold"
                     android:textSize="15sp"
