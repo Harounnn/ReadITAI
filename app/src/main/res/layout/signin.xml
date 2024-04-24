@@ -30,7 +30,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="150dp"
         android:id="@+id/username"
-        android:textStyle="italic|bold">
+        android:textStyle="italic|bold"
+        android:height="50dp">
 
     </EditText>
     <EditText
@@ -45,7 +46,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
         android:textStyle="italic|bold"
-        android:id="@+id/password">
+        android:id="@+id/password"
+        android:height="50dp">
 
     </EditText>
 
