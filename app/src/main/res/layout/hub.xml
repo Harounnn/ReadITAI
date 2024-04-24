@@ -12,7 +12,7 @@
         android:textColor="#0096FF"
         android:textSize="40sp"
         android:textStyle="bold"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="250dp"
         android:id="@+id/title"
         >
 
@@ -32,7 +32,7 @@
         android:textSize="20sp"
         android:textStyle="bold"
         android:layout_below="@id/title"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="150dp"
         >
 
     </Button>
