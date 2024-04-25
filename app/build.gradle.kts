@@ -45,4 +45,5 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
+    implementation("edu.stanford.nlp:stanford-corenlp:4.4.0")
 }

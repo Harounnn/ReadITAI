@@ -32,4 +32,6 @@ public class sumNews extends AppCompatActivity {
         link.setText((String) b.get("link"));
 
     }
+
+
 }
