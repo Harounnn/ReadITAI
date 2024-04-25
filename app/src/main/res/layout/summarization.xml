@@ -3,4 +3,77 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginTop="0dp"
+        android:background="@color/darkGray"
+        android:id="@+id/toolbarsum">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Read IT AI"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@color/blue">
+            </TextView>
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbarsum"
+        android:src="@drawable/ic_launcher_background"
+        android:id="@+id/imagesum"
+        android:background="@color/lightBlue">
+
+    </ImageView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imagesum"
+        android:text="Headline is heeeeere"
+        android:background="@color/darkGray"
+        android:textColor="@color/blue"
+        android:textAlignment="center"
+        android:id="@+id/headline"
+        android:textStyle="bold">
+
+    </TextView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/headline"
+        android:text="Summarization is heeeeere hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh"
+        android:background="@color/darkGray"
+        android:textColor="@color/lightBlue"
+        android:textAlignment="center"
+        android:id="@+id/summary">
+
+    </TextView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/summary"
+        android:text="link"
+        android:autoLink="web"
+        android:linksClickable="true"
+        android:background="@color/darkGray"
+        android:textColor="@color/lightBlue"
+        android:textAlignment="center"
+        android:id="@+id/link">
+
+    </TextView>
+
 </android.widget.RelativeLayout>
