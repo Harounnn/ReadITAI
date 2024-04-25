@@ -39,7 +39,8 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, sumNews.class);
-                intent.putExtra("content", models.get(holder.getAdapterPosition()).getContent());
+                String s = "title";
+                intent.putExtra(s,models.get(holder.getAdapterPosition()).getTitle());
                 context.startActivity(intent);
             }
         });
@@ -68,5 +69,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
             cardView = itemView.findViewById(R.id.cardView);
             image = itemView.findViewById(R.id.image);
         }
+
+
     }
 }
