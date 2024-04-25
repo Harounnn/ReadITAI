@@ -7,7 +7,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
 
 import com.bumptech.glide.Glide;
 
@@ -22,6 +21,7 @@ public class sumNews extends AppCompatActivity {
 
         TextView title = findViewById(R.id.headline);
         ImageView image = findViewById(R.id.imagesum);
+        TextView text = findViewById(R.id.summary);
         TextView link = findViewById(R.id.link);
 
         Intent i = getIntent();
@@ -30,6 +30,12 @@ public class sumNews extends AppCompatActivity {
         title.setText((String) b.get("title"));
         Glide.with(this).load(b.get("image")).into(image);
         link.setText((String) b.get("link"));
+
+        Summarizer summarizer = new Summarizer((String) b.get("content"));
+
+        String summary = summarizer.summarize();
+
+        text.setText(summary);
 
     }
 

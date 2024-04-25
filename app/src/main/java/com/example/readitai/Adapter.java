@@ -48,6 +48,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
                 intent.putExtra("title", models.get(holder.getAdapterPosition()).getTitle());
                 intent.putExtra("image", models.get(holder.getAdapterPosition()).getUrlToImage());
                 intent.putExtra("link", models.get(holder.getAdapterPosition()).getUrl());
+                intent.putExtra("content", models.get(holder.getAdapterPosition()).getContent());
 
                 v.getContext().startActivity(intent);
             }

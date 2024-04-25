@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/blue">
 
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
@@ -61,7 +62,9 @@
         android:background="@color/darkGray"
         android:textColor="@color/lightBlue"
         android:textAlignment="center"
-        android:id="@+id/summary">
+        android:id="@+id/summary"
+        android:textSize="25sp"
+        android:textStyle="bold">
 
     </TextView>
     <TextView
@@ -74,7 +77,9 @@
         android:background="@color/darkGray"
         android:textColor="@color/lightBlue"
         android:textAlignment="center"
-        android:id="@+id/link">
+        android:id="@+id/link"
+        android:textSize="20sp"
+        android:textStyle="italic">
 
     </TextView>
 
