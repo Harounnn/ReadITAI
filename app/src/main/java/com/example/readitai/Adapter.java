@@ -35,19 +35,23 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull Adapter.ViewHolder holder, int position) {
-        holder.cardView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(context, sumNews.class);
-                String s = "title";
-                intent.putExtra(s,models.get(holder.getAdapterPosition()).getTitle());
-                context.startActivity(intent);
-            }
-        });
 
         holder.heading.setText(models.get(holder.getAdapterPosition()).getTitle());
         holder.description.setText(models.get(holder.getAdapterPosition()).getContent());
         Glide.with(context).load(models.get(holder.getAdapterPosition()).getUrlToImage()).into(holder.image);
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), sumNews.class);
+
+                intent.putExtra("title", models.get(holder.getAdapterPosition()).getTitle());
+                intent.putExtra("image", models.get(holder.getAdapterPosition()).getUrlToImage());
+                intent.putExtra("link", models.get(holder.getAdapterPosition()).getUrl());
+
+                v.getContext().startActivity(intent);
+            }
+        });
 
 
     }

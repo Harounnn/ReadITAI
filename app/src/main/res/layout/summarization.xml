@@ -22,7 +22,8 @@
                 android:text="Read IT AI"
                 android:textStyle="bold"
                 android:textSize="20sp"
-                android:textColor="@color/blue">
+                android:textColor="@color/blue"
+                >
             </TextView>
 
         </RelativeLayout>
@@ -48,7 +49,8 @@
         android:textColor="@color/blue"
         android:textAlignment="center"
         android:id="@+id/headline"
-        android:textStyle="bold">
+        android:textStyle="bold"
+        android:textSize="30sp">
 
     </TextView>
     <TextView
