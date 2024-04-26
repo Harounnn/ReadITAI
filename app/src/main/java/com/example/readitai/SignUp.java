@@ -1,5 +1,6 @@
 package com.example.readitai;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -28,21 +29,20 @@ public class SignUp extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
 
-        EditText email = (EditText) findViewById(R.id.usernamesu);
-        String emailText = String.valueOf(email.getText());
-
-        EditText password = (EditText) findViewById(R.id.passwordsu);
-        String passwordText = String.valueOf(password.getText());
-
-        EditText passwordAgain = (EditText) findViewById(R.id.passwordAgain);
-        String passwordAgainText = String.valueOf(passwordAgain.getText());
-
-        Button signUpButton = (Button) findViewById(R.id.signUpButtonTwo);
-
+        Button signUpButton = (Button) findViewById(R.id.SignUpButtonTwo);
         signUpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(validator.isValidEmail(emailText) && validator.isValidPassword(passwordText) && passwordText == passwordAgainText){
+                EditText email = (EditText) findViewById(R.id.usernamesu);
+                String emailText = String.valueOf(email.getText());
+
+                EditText password = (EditText) findViewById(R.id.passwordsu);
+                String passwordText = String.valueOf(password.getText());
+
+                EditText passwordAgain = (EditText) findViewById(R.id.passwordAgain);
+                String passwordAgainText = String.valueOf(passwordAgain.getText());
+
+                if(validator.isValidEmail(emailText) && validator.isValidPassword(passwordText) && passwordText.equals(passwordAgainText)){
                     mAuth.createUserWithEmailAndPassword(emailText, passwordText)
                             .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
 
@@ -50,13 +50,21 @@ public class SignUp extends AppCompatActivity {
                                 public void onComplete(@NonNull Task<AuthResult> task) {
                                     if (task.isSuccessful()) {
                                         FirebaseUser user = mAuth.getCurrentUser();
+                                        email.setText("");
+                                        password.setText("");
+                                        passwordAgain.setText("");
+                                        Intent intent = new Intent(SignUp.this, SignIn.class);
+                                        startActivity(intent);
                                     } else {
-                                        Toast.makeText(SignUp.this, "Authentication failed.", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(SignUp.this, "You have an Account", Toast.LENGTH_SHORT).show();
                                     }
                                 }
                             });
+                } else {
+                    Toast.makeText(SignUp.this, "Authentication failed.", Toast.LENGTH_SHORT).show();
                 }
             }
+
         });
     }
 

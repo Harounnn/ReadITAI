@@ -12,7 +12,7 @@ public class Summarizer {
 
     public String summarize(){
         System.out.println(text);
-        String summary = Text2Summary.summarize(text, 0.9F);
+        String summary = Text2Summary.summarize(text, 0.7F);
         System.out.println(summary);
         return summary;
     }

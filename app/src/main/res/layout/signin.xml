@@ -21,8 +21,8 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#0096FF"
-        android:textColor="#333434"
+        android:backgroundTint="@color/blue"
+        android:textColor="@color/darkGray"
         android:width="300dp"
         android:hint="Email"
         android:textAlignment="center"
