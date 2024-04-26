@@ -12,8 +12,8 @@ public class SignIn extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.signin);
 
-        EditText username = (EditText) findViewById(R.id.username);
-        String usernameText = String.valueOf(username.getText());
+        EditText email = (EditText) findViewById(R.id.username);
+        String emailText = String.valueOf(email.getText());
 
         EditText password = (EditText) findViewById(R.id.password);
         String passwordText = String.valueOf(password.getText());

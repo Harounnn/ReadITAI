@@ -49,7 +49,8 @@
         android:width="150dp"
         android:height="50dp"
         android:textSize="15sp"
-        android:textStyle="bold">
+        android:textStyle="bold"
+        android:id="@+id/signUpButton">
 
     </Button>
 

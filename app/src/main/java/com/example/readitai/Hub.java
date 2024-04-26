@@ -14,11 +14,19 @@ public class Hub extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.hub);
 
-        Button button = (Button) findViewById(R.id.loginButton);
-        button.setOnClickListener(new View.OnClickListener() {
+        Button loginButton = (Button) findViewById(R.id.loginButton);
+        Button signUpButton = (Button) findViewById(R.id.signUpButton);
+        loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Hub.this, MainActivity.class);
+                Intent intent = new Intent(Hub.this, SignIn.class);
+                startActivity(intent);
+            }
+        });
+        signUpButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Hub.this, SignUp.class);
                 startActivity(intent);
             }
         });
