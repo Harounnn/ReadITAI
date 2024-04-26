@@ -73,7 +73,7 @@
         android:backgroundTint="#333434"
         android:text="Sign Up"
         android:textColor="#E2E9E9"
-        android:id="@+id/SignUpButton"
+        android:id="@+id/SignUpButtonTwo"
         android:width="200dp"
         android:height="75dp"
         android:textSize="20sp"
