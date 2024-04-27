@@ -82,5 +82,17 @@
         android:textStyle="italic">
 
     </TextView>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/link"
+        android:id="@+id/fav"
+        android:textColor="@color/lightBlue"
+        android:backgroundTint="@color/darkGray"
+        android:text="Tap to Fav"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp">
+
+    </Button>
 
 </android.widget.RelativeLayout>
