@@ -92,7 +92,8 @@
             android:backgroundTint="@color/lightBlue"
             android:textColor="@color/darkGray"
             android:text="Delete Account"
-            android:textStyle="bold">
+            android:textStyle="bold"
+            android:id="@+id/deleteButton">
 
         </Button>
 

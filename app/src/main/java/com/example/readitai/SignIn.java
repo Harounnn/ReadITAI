@@ -37,20 +37,28 @@ public class SignIn extends AppCompatActivity {
                 EditText password = (EditText) findViewById(R.id.password);
                 String passwordText = String.valueOf(password.getText());
 
-                mAuth.signInWithEmailAndPassword(emailText, passwordText)
-                        .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                            @Override
-                            public void onComplete(@NonNull Task<AuthResult> task) {
-                                if (task.isSuccessful()) {
-                                    FirebaseUser user = mAuth.getCurrentUser();
-                                    Intent intent = new Intent(SignIn.this, MainActivity.class);
-                                    intent.putExtra("email", emailText);
-                                    startActivity(intent);
-                                } else {
-                                    Toast.makeText(SignIn.this, "Authentication failed.", Toast.LENGTH_SHORT).show();
+                Validator validator = new Validator();
+
+                if(validator.isValidEmail(emailText) && validator.isValidPassword(passwordText)){
+                    mAuth.signInWithEmailAndPassword(emailText, passwordText)
+                            .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                                @Override
+                                public void onComplete(@NonNull Task<AuthResult> task) {
+                                    if (task.isSuccessful()) {
+                                        FirebaseUser user = mAuth.getCurrentUser();
+                                        Intent intent = new Intent(SignIn.this, MainActivity.class);
+                                        intent.putExtra("email", emailText);
+                                        startActivity(intent);
+                                    } else {
+                                        Toast.makeText(SignIn.this, "Authentication failed.", Toast.LENGTH_SHORT).show();
+                                    }
                                 }
-                            }
-                        });
+                            });
+                } else {
+                    Toast.makeText(SignIn.this, "Not Valid Input", Toast.LENGTH_SHORT).show();
+
+                }
+
 
             }
         });

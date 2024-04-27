@@ -1,11 +1,15 @@
 package com.example.readitai;
 
+import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import androidx.annotation.Nullable;
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class DbHandler extends SQLiteOpenHelper {
 
@@ -36,6 +40,23 @@ public class DbHandler extends SQLiteOpenHelper {
         db.insert(FAVOURITES_TABLE, null, values);
 
         db.close();
+    }
+
+    public List<String> getAllLinks() {
+        List<String> links = new ArrayList<>();
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT link FROM " + FAVOURITES_TABLE, null);
+        if (cursor != null && cursor.moveToFirst()) {
+            do {
+                @SuppressLint("Range") String link = cursor.getString(cursor.getColumnIndex("link"));
+                links.add(link);
+            } while (cursor.moveToNext());
+        }
+        if (cursor != null) {
+            cursor.close();
+        }
+        db.close();
+        return links;
     }
 
     @Override
